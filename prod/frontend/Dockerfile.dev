@@ -1,0 +1,9 @@
+FROM node:alpine
+WORKDIR 'E:\docker_test\prod'
+
+COPY package.json .
+RUN npm install
+
+COPY . .
+
+CMD ["npm", "run", "start"]
